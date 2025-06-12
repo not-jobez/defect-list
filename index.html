@@ -71,9 +71,27 @@
 </head>
 <body>
   <div class="message">
-    <h1>You’ve been professionally Rickrolled.</h1>
-    <p>🎶 Never gonna give you up, never gonna let you down... 🎶</p>
+  <h1>You’ve been professionally Rickrolled.</h1>
+  <p>🎶 Never gonna give you up, never gonna let you down... 🎶</p>
+
+  <!-- Link to show explanation -->
+  <p style="margin-top: 20px; font-size: 0.9em;">
+    <a href="#" onclick="showRickrollInfo(); return false;" style="color: #add8e6; text-decoration: underline;">
+      What’s Rickrolling?
+    </a>
+  </p>
+
+  <!-- Hidden explanation -->
+  <div id="rickroll-info" style="display: none; margin-top: 10px; font-size: 0.9em; color: #ccc;">
+    <p>
+      <strong>Rickrolling</strong> is an internet prank where someone clicks a link thinking it's something important or interesting,
+      but instead it leads to the music video for Rick Astley's 1987 song 
+      <em>"Never Gonna Give You Up"</em>. It's all in good fun and part of online meme culture!
+    </p>
   </div>
+</div>
+
+
 
   <!-- Include canvas-confetti via CDN -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
@@ -104,5 +122,11 @@
       }, 250);
     };
   </script>
+  <script>
+  function showRickrollInfo() {
+    const infoBox = document.getElementById('rickroll-info');
+    infoBox.style.display = 'block';
+  }
+</script>
 </body>
 </html>
